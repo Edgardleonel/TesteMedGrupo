@@ -1,0 +1,123 @@
+<app-header></app-header>
+  <div class="margin" *ngIf="open">
+    <ul class="collection with-header">
+      <li class="collection-header"><h4>{{school.description}}</h4></li>
+      <li class="collection-item">Endereço: {{school.address}}</li>
+      <li class="collection-item">Email: {{school.email}}</li>
+      <li class="collection-item">Telefone: {{school.telephone}}</li>
+      <li class="collection-item">
+        <button class="waves-effect waves-light btn" (click)="edit()">Editar</button>
+        <button class="waves-effect waves-light btn red" (click)="removeSchool(school.id)">Excluir</button>
+      </li>
+    </ul>
+
+    <table class="collection with-header" >
+        <h4>Lista de Classes</h4>
+        <a (click)="enterGroup()" class="btn-floating btn-large">
+          <i class="large material-icons">add</i>
+        </a>
+      <tr>
+        <th>Classe</th>
+        <th>Número de Alunos</th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr *ngFor="let group of groups">
+        <td>{{group.title}}</td>
+        <td>{{group.quantity}}</td>
+        <td><button class="waves-effect waves-light btn" (click)="editGroup(group)">Editar</button></td>
+        <td><button class="waves-effect waves-light btn red" (click)="removeGroup(group.id)">Excluir</button></td>
+        <div class="progress" *ngIf="load">
+          <div class="indeterminate"></div>
+        </div>
+      </tr>
+    </table>
+  </div>
+
+
+
+  <div class="container" *ngIf="openSchool">
+    <a (click)="close()"><i class="material-icons right">close</i></a>
+    <h4>Editar Escola</h4>
+    <div class="row">
+      <div class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <input [(ngModel)]="school.description"  id="description" type="text" class="validate">
+            <label for="description">Descrição</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input  [(ngModel)]="school.address" id="address" type="text" class="validate">
+            <label for="address">Endreço</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input  [(ngModel)]="school.email" id="email" email type="email" class="validate">
+            <label for="email">Email</label>
+          </div>
+          <div class="input-field col s6">
+            <input  [(ngModel)]="school.telephone"  id="telephone" type="text" class="validate">
+            <label for="telephone">Telefone</label>
+          </div>
+        </div>
+        <div class="progress" *ngIf="load">
+          <div class="indeterminate"></div>
+        </div>
+          <button class="btn waves-effect waves-light" type="submit" name="action" (click)="save()" >Salvar Dados</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container" *ngIf="openGroup">
+    <a (click)="close()"><i class="material-icons right">close</i></a>
+    <h4>Cadastro de Classes - Escola {{school.description}}</h4>
+    <div class="row">
+      <form class="col s12" [formGroup]="form" (ngSubmit)="createGroup(group)">
+        <div class="row">
+          <div class="input-field col s12">
+            <input formControlName="title" id="title" type="text" class="validate">
+            <label for="title">Nome da Sala:</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input formControlName="quantity" id="quantity" type="number" class="validate">
+            <label for="quantity">Quantos alunos tem?</label>
+          </div>
+        </div>
+        <div class="progress" *ngIf="load">
+          <div class="indeterminate"></div>
+        </div>
+          <button class="btn waves-effect waves-light" type="submit" name="action" [disabled]="!form.valid">Adicionar</button>
+      </form>
+    </div>
+  </div>
+
+
+
+  <div class="container" *ngIf="openGroupEdit">
+    <a (click)="close()"><i class="material-icons right">close</i></a>
+    <h4>Editar Classe da Escola {{school.description}}</h4>
+    <div class="row">
+      <div class="col s12">
+        <div class="row">
+          <div class="input-field col s6">
+            <input  [(ngModel)]="groupSelect.title" id="title" email type="text" class="validate">
+            <label for="title">Email</label>
+          </div>
+          <div class="input-field col s6">
+            <input  [(ngModel)]="groupSelect.quantity"  id="quantity" type="number" class="validate">
+            <label for="quantity">Telefone</label>
+          </div>
+        </div>
+        <div class="progress" *ngIf="load">
+          <div class="indeterminate"></div>
+        </div>
+          <button class="btn waves-effect waves-light" type="submit" name="action" (click)="saveGroup()" >Salvar Dados</button>
+      </div>
+    </div>
+  </div>

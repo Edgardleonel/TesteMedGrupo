@@ -1,0 +1,35 @@
+<div class="container-card">
+  <div class="row">
+    <div class="col s12 m12">
+      <form [formGroup]="form" (ngSubmit)="login()">
+        <div class="card blue-grey darken-1">
+          <div class="card-content white-text">
+            <span class="card-title">Login</span>
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">email</i>
+                  <input formControlName="email" id="email" email type="email" class="validate">
+                  <label for="email">Seu Email...</label>
+                </div>
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">lock</i>
+                  <input formControlName="senha" id="senha" type="password" class="validate">
+                  <label for="senha">Sua Senha...</label>
+                </div>
+              </div>
+          </div>
+            <div class="progress" *ngIf="load">
+              <div class="indeterminate"></div>
+            </div>
+            <div class="card-action">
+              <button class="btn waves-effect waves-light" type="submit" name="action">Entrar
+                <i class="material-icons right">send</i>
+              </button>
+            </div>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+

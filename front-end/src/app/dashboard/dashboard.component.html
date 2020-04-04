@@ -1,0 +1,59 @@
+<nav>
+  <div class="nav-wrapper">
+    <a routerLink="/dashboard" class="brand-logo">Painel</a>
+    <ul id="nav-mobile" class="right">
+      <li><a (click)="openSearch()"><i class="material-icons prefix">search</i></a></li>
+      <li><a routerLink="/" (click)="logout()"><i class="material-icons prefix">power_settings_new</i></a></li>
+    </ul>
+  </div>
+</nav>
+<nav *ngIf="search">
+  <div class="nav-wrapper">
+    <form>
+      <div class="input-field">
+        <input (change)="setFilteredItems($event)" id="search" type="search" required>
+        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+        <i (click)="closeSearch()" class="material-icons">close</i>
+      </div>
+    </form>
+  </div>
+</nav>
+
+<div class="container">
+  <table class="collection with-header">
+    <tr>
+      <th>Número de Escolas</th>
+      <th>Número de Classes</th>
+      <th>Número de Alunos</th>
+    </tr>
+    <tr>
+      <td>{{nSchools}}</td>
+      <td>{{nGroups}}</td>
+      <td>{{nAlunos}}</td>
+    </tr>
+  </table>
+  <div class="fixed-action-btn">
+    <a routerLink="/school-create" class="btn-floating btn-large">
+      <i class="large material-icons">add</i>
+    </a>
+  </div>
+  <div class="card" *ngFor="let school of schools">
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">{{school.description}}<i class="material-icons right">more_vert</i></span>
+      <div class="card-action">
+        <a (click)="open(school)" >Mais Detalhes</a>
+      </div>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">{{school.description}}<i class="material-icons right">close</i></span>
+      <div class="card-action">
+        <p>Endereço: {{school.address}}</p>
+        <p>Email: {{school.email}}</p>
+        <p>Telefone: {{school.telephone}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

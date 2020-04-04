@@ -1,0 +1,36 @@
+<app-header></app-header>
+
+<div class="container">
+  <a routerLink="/dashboard"><i class="material-icons right">close</i></a>
+  <h4>Cadastro Escola</h4>
+  <div class="row">
+    <form class="col s12" [formGroup]="form" (ngSubmit)="register(schools)">
+      <div class="row">
+        <div class="input-field col s12">
+          <input formControlName="description" id="description" type="text" class="validate">
+          <label for="description">Descrição</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input formControlName="address" id="address" type="text" class="validate">
+          <label for="address">Endreço</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <input formControlName="email" id="email" email type="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+        <div class="input-field col s6">
+          <input formControlName="telephone" id="telephone" type="text" class="validate">
+          <label for="telephone">Telefone</label>
+        </div>
+      </div>
+      <div class="progress" *ngIf="load">
+        <div class="indeterminate"></div>
+      </div>
+        <button class="btn waves-effect waves-light" type="submit" name="action" [disabled]="!form.valid">Adicionar</button>
+    </form>
+  </div>
+</div>

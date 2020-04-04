@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 400 14px Roboto, sans-serif;
+    background-color: #f0f0f5;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+.container-card {
+  width: 100%;
+  max-width: 1120px;
+  height: 100vh;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1120px;
+  height: 100vh;
+  margin: 5% auto;
+}
+
+.brand-logo {
+  margin: 0 2%;
+}
+
+.margin {
+  margin: 5%;
+}
+
+nav {
+  background: #546e7a;
+}
+
+.right {
+  text-align: right;
+}
+
+a {
+  cursor: pointer;
+}
+
+
+
+
