@@ -1,4 +1,4 @@
-# FrontEnd
+# Project 
 Angular version 9.0.1.
 Run `npm install`
 
