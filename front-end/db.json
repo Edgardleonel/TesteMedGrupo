@@ -2,38 +2,69 @@
   "schools": [
     {
       "id": 1,
-      "description": "Escola 1 - Municipal",
+      "description": "Escola 1  Municipal ",
       "address": "Rua Teste",
       "email": "escola1@gmail.com",
       "telephone": "015 9999-9999"
     },
     {
       "id": 2,
-      "description": "Escola 2",
-      "address": "Rua 2",
+      "description": "Colégio Horácio Manley Lanne ",
+      "address": "Rua 20",
       "email": "escola2@gmail.com",
       "telephone": "015 8888-8888"
     },
     {
-      "description": "Fatec",
-      "address": "Rua ",
+      "description": "Fatec ",
+      "address": "Rua",
       "email": "email@email.com",
-      "telephone": "9999999999999",
-      "id": 5
+      "telephone": "011999999999",
+      "id": 3
+    },
+    {
+      "description": "Escola Adventista",
+      "address": "Rua",
+      "email": "adventista@adventista.com",
+      "telephone": "119999999999",
+      "id": 4
     }
   ],
   "group": [
     {
       "id": 1,
-      "title": "1o série - B",
-      "quantity": 44,
+      "title": "1o série - B1",
+      "quantity": 46,
       "idSchool": 1
     },
     {
       "title": "1o ano do 2o grau",
-      "quantity": 40,
+      "quantity": 48,
       "idSchool": 1,
       "id": 2
+    },
+    {
+      "title": "1a serie - sala B",
+      "quantity": 22,
+      "idSchool": 2,
+      "id": 3
+    },
+    {
+      "title": "Sala 2o ano - manhã",
+      "quantity": 30,
+      "idSchool": 4,
+      "id": 4
+    },
+    {
+      "title": "1o ano do 2o grau",
+      "quantity": 30,
+      "idSchool": 2,
+      "id": 5
+    },
+    {
+      "title": "Sala 1 - Supletivo",
+      "quantity": 30,
+      "idSchool": 2,
+      "id": 6
     }
   ]
 }

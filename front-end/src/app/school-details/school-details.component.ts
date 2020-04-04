@@ -50,6 +50,7 @@ public groupSelect: any;
   }
 
   enterGroup() {
+    this.load = false;
     this.open = false;
     this.openSchool = false;
     this.openGroup = true;
@@ -58,6 +59,7 @@ public groupSelect: any;
 
 
   edit() {
+    this.load = false;
     this.open = false;
     this.openSchool = true;
     this.openGroup = false;
@@ -92,6 +94,7 @@ public groupSelect: any;
   }
 
   editGroup(group) {
+    this.load = false;
     this.service.selectedGroup = group;
     this.groupSelect = this.service.selectedGroup;
     this.open = false;
