@@ -11,6 +11,7 @@ import { SchoolCreateComponent } from './school-create/school-create.component';
 import { AuthService } from './services/auth.service';
 import { HttpService } from './services/http.service';
 import { GuardService } from './services/guard.service';
+import { ServiceService } from './services/service.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -45,7 +46,8 @@ import { HttpClientModule } from '@angular/common/http';
   providers: [
     AuthService,
     HttpService,
-    GuardService
+    GuardService,
+    ServiceService
   ],
   bootstrap: [AppComponent]
 })

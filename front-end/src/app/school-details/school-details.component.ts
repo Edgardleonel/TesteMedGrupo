@@ -23,6 +23,7 @@ public group: Group;
 public groups: any;
 public groupSelect: any;
 
+
   constructor(
     private service: ServiceService,
     private httpService: HttpService,
@@ -90,6 +91,7 @@ public groupSelect: any;
     group = this.form.value;
     this.httpService.createGroup(group).subscribe((res) => {
       this.loading();
+      this.form.reset();
     });
   }
 
