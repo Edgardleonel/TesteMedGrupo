@@ -1,5 +1,5 @@
 export class Schools {
-  id: number;
+  id: string;
   description: string;
   address: string;
   email: string;

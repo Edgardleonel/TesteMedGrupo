@@ -16,8 +16,8 @@ export class HttpService {
 
   constructor(private http: HttpClient) { }
 
-  public url = 'http://localhost:3000/schools';
-  public url2 = 'http://localhost:3000/group';
+  readonly url = 'http://localhost:3000/schools';
+  readonly url2 = 'http://localhost:3000/group';
 
 
   getSchools(): Observable<Schools[]> {
@@ -31,7 +31,7 @@ export class HttpService {
     const apiurl = `${this.url}/${id}`;
     return this.http.put<Schools>(apiurl, schools , httpOptions);
   }
-  deleteSchoolsId(id): Observable<any> {
+  deleteSchoolsId(id: string): Observable<Schools> {
     const apiurl = `${this.url}/${id}`;
     return this.http.delete<any>(apiurl, httpOptions);
   }
@@ -49,7 +49,7 @@ export class HttpService {
     const apiurl = `${this.url2}/${id}`;
     return this.http.put<Group>(apiurl, group , httpOptions);
   }
-  deleteGroupId(id): Observable<any> {
+  deleteGroupId(id: string): Observable<Group> {
     const apiurl = `${this.url2}/${id}`;
     return this.http.delete<any>(apiurl, httpOptions);
   }

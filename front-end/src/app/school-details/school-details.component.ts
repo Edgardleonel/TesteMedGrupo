@@ -23,7 +23,6 @@ public group: Group;
 public groups: any;
 public groupSelect: any;
 
-
   constructor(
     private service: ServiceService,
     private httpService: HttpService,
@@ -87,12 +86,13 @@ public groupSelect: any;
   }
 
 
-  createGroup(group: Group) {
-    group = this.form.value;
-    this.httpService.createGroup(group).subscribe((res) => {
+  createGroup() {
+    this.httpService.createGroup(this.form.value).subscribe((res) => {
       this.loading();
       this.form.reset();
+      this.buildForm();
     });
+
   }
 
   editGroup(group) {
@@ -113,7 +113,7 @@ public groupSelect: any;
     });
   }
 
-  removeSchool(id) {
+  removeSchool(id: string) {
     if (this.groups.length === 0) {
     this.httpService.deleteSchoolsId(id).subscribe((res) => {
       alert('A escola foi removido com sucesso!');
@@ -124,7 +124,7 @@ public groupSelect: any;
     }
   }
 
-  removeGroup(id) {
+  removeGroup(id: string) {
     this.httpService.deleteGroupId(id).subscribe((res) => {
      alert('A classe foi removido com sucesso!');
      this.loading();

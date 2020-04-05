@@ -1,5 +1,5 @@
 const connection = require('../database/connection')
-const crypto = require('crypto');
+
 
 module.exports = {
     async index(request, response) {
@@ -11,17 +11,14 @@ module.exports = {
     async create(request, response) {
     const { description, address, email, telephone } = request.body;
 
-    const id = crypto.randomBytes(4).toString('HEX');
-
-    await connection('schools').insert({
-        id,
+    const schools = await connection('schools').insert({
         description,
         address,
         email,
         telephone,
     });
 
-    return response.json({ id });
+    return response.json(schools);
        
     },
 
@@ -32,5 +29,15 @@ module.exports = {
 
         return response.status(204).send();
     },
+
+    async update(request, response) {
+        const { id } = request.params;
+        const { description, address, email, telephone } = request.body;
+
+        await connection('schools').where('id', id).update({description, address, email, telephone});
+
+        return response.status(204).send();
+    },
+
 
 };

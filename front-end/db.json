@@ -15,9 +15,9 @@
       "telephone": "015 8888-8888"
     },
     {
-      "description": "Fatec ",
+      "description": "Fatec São Roque",
       "address": "Rua",
-      "email": "email@email.com",
+      "email": "fatec@fatec.sp.gov.br",
       "telephone": "011999999999",
       "id": 3
     },
@@ -27,117 +27,38 @@
       "email": "adventista@adventista.com",
       "telephone": "119999999999",
       "id": 4
-    },
-    {
-      "description": "Escola Adventista 2",
-      "address": "Rua",
-      "email": "adventista@adventista.com",
-      "telephone": "1199999999999",
-      "id": 5
     }
   ],
   "group": [
     {
       "id": 1,
-      "title": "1o série - B1",
+      "title": "1o série - sala A",
       "quantity": 46,
       "idSchool": 1
     },
     {
-      "title": "1a serie - sala B",
+      "title": "1o ano do 2o grau",
       "quantity": 22,
       "idSchool": 2,
       "id": 3
     },
     {
-      "title": "1o ano do 2o grau",
+      "title": "2o ano do 2o grau",
       "quantity": 30,
       "idSchool": 2,
       "id": 5
     },
     {
       "title": "1o ano Sistema para Internet",
-      "quantity": 30,
+      "quantity": 31,
       "idSchool": 3,
       "id": 8
     },
     {
-      "title": "3o ano",
-      "quantity": 30,
-      "idSchool": 5,
-      "id": 9
-    },
-    {
-      "title": "1o ano do 2o grau",
-      "quantity": 20,
-      "idSchool": 5,
-      "id": 10
-    },
-    {
-      "title": "Sala ",
-      "quantity": 20,
-      "idSchool": 5,
-      "id": 11
-    },
-    {
-      "title": "Sala 1",
-      "quantity": 30,
-      "idSchool": 5,
-      "id": 12
-    },
-    {
-      "title": "Sala 1",
-      "quantity": 30,
-      "idSchool": 5,
-      "id": 13
-    },
-    {
-      "title": "Sala 1",
-      "quantity": 30,
-      "idSchool": 2,
-      "id": 14
-    },
-    {
-      "title": "Sala 1",
-      "quantity": 20,
-      "idSchool": 1,
-      "id": 16
-    },
-    {
-      "title": "Sala 1",
-      "quantity": 40,
-      "idSchool": 2,
-      "id": 17
-    },
-    {
-      "title": "Sala 1",
-      "quantity": 30,
-      "idSchool": 1,
-      "id": 18
-    },
-    {
-      "title": "1a serie - sala B",
-      "quantity": 30,
-      "idSchool": 1,
-      "id": 19
-    },
-    {
-      "title": "Sala teste",
-      "quantity": 20,
-      "idSchool": 1,
-      "id": 21
-    },
-    {
-      "title": "Sala",
+      "title": "2a serie - sala C",
       "quantity": 22,
       "idSchool": 1,
-      "id": 22
-    },
-    {
-      "title": "sala 1",
-      "quantity": 33,
-      "idSchool": 1,
-      "id": 23
+      "id": 27
     }
   ]
 }
